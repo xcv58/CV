@@ -2,7 +2,7 @@ FTP_DIR=cv
 
 all: pdf html
 
-pdf: RaphaelPinson_fr.pdf RaphaelPinson_en.pdf
+pdf: xcv58.pdf xcv58-one-page.pdf
 
 html: RaphaelPinson_fr.html RaphaelPinson_en.html
 
@@ -12,8 +12,10 @@ englishcv: RaphaelPinson_en.pdf
 %.pdf: %.tex
 	#lualatex -interaction=batchmode $<
 	#lualatex -interaction=batchmode $<
-	xelatex -interaction=batchmode $<
-	xelatex -interaction=batchmode $<
+	#xelatex -interaction=batchmode $<
+	#xelatex -interaction=batchmode $<
+	pdflatex $<
+	latexmk -c
 
 %.html: %.pdf
 	pdf2htmlEX --zoom=2 $<

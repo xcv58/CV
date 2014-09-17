@@ -4,10 +4,7 @@ all: pdf html
 
 pdf: xcv58.pdf xcv58-one-page.pdf
 
-html: RaphaelPinson_fr.html RaphaelPinson_en.html
-
-frenchcv: RaphaelPinson_fr.pdf
-englishcv: RaphaelPinson_en.pdf
+html: xcv58.html xcv58-one-page.pdf
 
 %.pdf: %.tex
 	#lualatex -interaction=batchmode $<

@@ -2,7 +2,7 @@ all: pdf
 
 pdf: xcv58.pdf xcv58-one-page.pdf
 
-*.pdf : RaphaelPinson.sty
+*.pdf : *.sty
 
 html: xcv58.html xcv58-one-page.html
 

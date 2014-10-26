@@ -1,25 +1,17 @@
-FTP_DIR=cv
-
-all: pdf html
+all: pdf
 
 pdf: xcv58.pdf xcv58-one-page.pdf
 
-html: xcv58.html xcv58-one-page.pdf
+*.pdf : RaphaelPinson.sty
+
+html: xcv58.html xcv58-one-page.html
 
 %.pdf: %.tex
-	#lualatex -interaction=batchmode $<
-	#lualatex -interaction=batchmode $<
-	#xelatex -interaction=batchmode $<
-	#xelatex -interaction=batchmode $<
 	pdflatex $<
 	latexmk -c
 
 %.html: %.pdf
 	pdf2htmlEX --zoom=2 $<
-
-upload:
-	-ncftpput -f ~/.ncftp/cc.cfg $(FTP_DIR)/ *.pdf
-	-ncftpput -f ~/.ncftp/cc.cfg $(FTP_DIR)/ *.tex *.sty
 
 clean:
 	rm -f *.aux *.log *.out

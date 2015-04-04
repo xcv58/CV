@@ -10,8 +10,8 @@ html: xcv58.html xcv58-one-page.html
 	pdflatex $<
 	latexmk -c
 
-%.html: %.pdf
-	pdf2htmlEX --zoom=2 $<
+# %.html: %.pdf
+# 	pdf2htmlEX --zoom=2 $<
 
 clean:
 	rm -f *.aux *.log *.out

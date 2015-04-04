@@ -9,7 +9,16 @@
 %\usepackage[utf8]{inputenc}
 
 % adjust the page margins
-\usepackage[scale=0.8]{geometry}
+% \usepackage[legalpaper]{geometry}
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  total={210mm,297mm},
+  left=16mm,
+  right=16mm,
+  top=16mm,
+  bottom=16mm,
+}
 
 \usepackage{ifxetex,ifluatex}
 \newif\ifxetexorluatex
@@ -65,9 +74,9 @@
 
 \AtBeginDocument{\renewcommand{\labelitemi}{-- }}
 
-\usepackage[firstyear=2000,lastyear=2018]{moderntimeline}
+\usepackage[firstyear=2004,lastyear=2020]{moderntimeline}
 %\tlmaxdates{1999}{2012}
-\tlwidth{0.8ex}
+\tlwidth{0.8964ex}
 
 
 % Proper alignment

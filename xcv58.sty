@@ -1,6 +1,5 @@
 \ProvidesPackage{xcv58}
 \RequirePackage{metalogo}
-
 % moderncv themes
 \moderncvtheme[red]{classic} % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
 %\moderncvtheme[green]{casual}   % idem
@@ -21,6 +20,7 @@
 }
 
 \usepackage{ifxetex,ifluatex}
+
 \newif\ifxetexorluatex
 \ifxetex
   \xetexorluatextrue
@@ -31,15 +31,15 @@
     \xetexorluatexfalse
   \fi
 \fi
-\ifxetexorluatex
 
-\usepackage{fontspec}
-\defaultfontfeatures{Ligatures=TeX}
-\newfontfamily{\githubfont}{Octicons}
-\newfontfamily{\linkedinfont}{Myriad Pro}
+\ifxetexorluatex
+  \usepackage{fontspec}
+  \defaultfontfeatures{Ligatures=TeX}
+  \newfontfamily{\githubfont}{Octicons}
+  \newfontfamily{\linkedinfont}{Myriad Pro}
 \else
-\newcommand\githubfont{}
-\newcommand\linkedinfont{}
+  \newcommand\githubfont{}
+  \newcommand\linkedinfont{}
 \fi
 
 \usepackage{microtype}

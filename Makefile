@@ -1,8 +1,8 @@
 all: pdf
 
-pdf: xcv58.pdf xcv58-one-page.pdf
+pdf: xcv58-one-page.pdf
 
-*.pdf : *.sty
+*.pdf : *.sty *.tex
 
 html: xcv58.html xcv58-one-page.html
 

@@ -1,10 +1,10 @@
 all: pdf
 
-pdf: xcv58-one-page.pdf
+pdf: xcv58.pdf
 
 *.pdf : *.sty *.tex
 
-html: xcv58.html xcv58-one-page.html
+html: xcv58.html
 
 %.pdf: %.tex
 	pdflatex $<

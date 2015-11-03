@@ -74,10 +74,17 @@
 
 \AtBeginDocument{\renewcommand{\labelitemi}{-- }}
 
-\usepackage[firstyear=2004,lastyear=2020]{moderntimeline}
+\usepackage[firstyear=2004,lastyear=2016]{moderntimeline}
 %\tlmaxdates{1999}{2012}
-\tlwidth{0.8964ex}
 
+\makeatletter
+\pgfmathsetmacro\tl@textstartabove{\tl@width+0.618pt}
+\makeatother
+
+\tltextstart[north]{\scriptsize}
+\tltextend[south]{\scriptsize}
+\tlwidth{0.618ex}
+\tltext{\tiny}
 
 % Proper alignment
 \usepackage[originalcommands]{ragged2e}

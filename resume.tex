@@ -1,0 +1,52 @@
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\PassOptionsToPackage{ocgcolorlinks=true,pdfpagelabels=false,colorlinks=true,linkcolor=blue,urlcolor=NavyBlue}{hyperref}
+\documentclass[11pt,letterpaper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+% \moderncvstyle{banking} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+% \setlength{\hintscolumnwidth}{10cm}
+
+\usepackage{geometry}
+\geometry{
+  letterpaper,
+  left=8mm,
+  right=8mm,
+  top=8mm,
+  bottom=8mm,
+}
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\renewcommand{\labelitemii}{$\bullet$}
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+% \setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%       NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Yihong} % Your first name
+\familyname{Chen} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+% \title{Curriculum Vitae}
+\address{Buffalo, NY, 14228}{}
+\mobile{(716) 939 7629}
+\email{jobs@xcv58.com}
+\homepage{xcv58.me}                         % optional, remove / comment the line if not wanted
+% \homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+\social[github]{xcv58}                              % optional, remove / comment the line if not wanted
+% \photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+\quote{OBJECTIVE: XXX}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+\input{edu.tex}
+\input{exp.tex}
+\input{sk.tex}
+
+\end{document}

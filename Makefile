@@ -2,7 +2,7 @@ all: pdf
 
 pdf: resume.pdf
 
-*.pdf : *.sty *.tex
+*.pdf : *.tex
 
 %.pdf: %.tex
 	pdflatex $<
